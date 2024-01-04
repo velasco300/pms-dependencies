@@ -2,31 +2,21 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <parent>
-        <groupId>com.zzz.pms</groupId>
-        <artifactId>pms-parent</artifactId>
-        <version>1.0.0</version>
-        <relativePath>../pms-parent</relativePath>
-    </parent>
+
     <groupId>com.zzz.pms</groupId>
-    <artifactId>pms-eureka</artifactId>
+    <artifactId>pms-dependencies</artifactId>
     <version>1.0.0</version>
+    <packaging>pom</packaging>
+
+    <properties>
+        <pms-generic.version>1.0.0</pms-generic.version>
+    </properties>
 
     <dependencies>
         <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <optional>true</optional>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
+            <groupId>com.zzz.pms</groupId>
+            <artifactId>pms-generic</artifactId>
+            <version>${pms-generic.version}</version>
         </dependency>
     </dependencies>
 

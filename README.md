@@ -1,1 +1,1 @@
-# pms-eureka
+# pms-dependencies
