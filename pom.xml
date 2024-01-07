@@ -3,13 +3,20 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.zzz.pms</groupId>
+    <parent>
+        <groupId>com.zzz.pms</groupId>
+        <artifactId>pms-parent</artifactId>
+        <version>1.0.0</version>
+        <relativePath>../pms-parent</relativePath>
+    </parent>
     <artifactId>pms-dependencies</artifactId>
     <version>1.0.0</version>
     <packaging>pom</packaging>
 
     <properties>
         <pms-generic.version>1.0.0</pms-generic.version>
+        <mybatis-plus.version>3.5.3.1</mybatis-plus.version>
+        <mysql.version>8.0.33</mysql.version>
     </properties>
 
     <dependencies>
@@ -17,6 +24,20 @@
             <groupId>com.zzz.pms</groupId>
             <artifactId>pms-generic</artifactId>
             <version>${pms-generic.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-boot-starter</artifactId>
+            <version>${mybatis-plus.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>${mysql.version}</version>
         </dependency>
     </dependencies>
 
